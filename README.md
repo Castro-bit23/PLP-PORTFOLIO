@@ -37,7 +37,7 @@ I've contributed to several impactful apps including **Jahazitech Electrical ltd
 
 ## Preview
 
-![Portfolio Preview](./images/about2.png)
+![Portfolio Preview](./images/preview.jpg)
 
 > Minimalist, modern, and crafted with care.
 
