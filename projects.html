@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Castro-bit23 | Projects</title>
+    <link rel="icon" href="images/dark.png" type="image/png" />
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #333;
+        color: #fff;
+        scroll-behavior: smooth;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: #222;
+        color: #fff;
+        flex-wrap: wrap;
+      }
+
+      nav .left a {
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 1.2rem;
+      }
+
+      nav .right a {
+        margin-left: 1.5rem;
+        color: #ddd;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      nav .right a:hover {
+        color: #fff;
+      }
+
+      .hamburger {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #fff;
+      }
+
+      #menu-toggle {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+        }
+
+        nav .right {
+          width: 100%;
+          flex-direction: column;
+          align-items: flex-start;
+          display: none;
+          background-color: #222;
+          padding: 1rem 2rem;
+          gap: 0.8rem;
+        }
+
+        #menu-toggle:checked + label + .right {
+          display: flex;
+        }
+
+        .right a {
+          margin-left: 0;
+        }
+      }
+
+      .projects-section {
+        padding: 4rem 2rem;
+        max-width: 1100px;
+        margin: auto;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .project-card {
+        background: #f9f9f9;
+        border-radius: 12px;
+        color: #333;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 1s ease forwards;
+      }
+
+      .project-card:nth-child(1) {
+        animation-delay: 0.3s;
+      }
+
+      .project-card:nth-child(2) {
+        animation-delay: 0.6s;
+      }
+
+      .project-card:nth-child(3) {
+        animation-delay: 0.9s;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .project-card h3 {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      .project-card a {
+        color: #0066ff;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .project-card a:hover {
+        text-decoration: underline;
+      }
+
+      .section-title {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        animation: fadeIn 1s ease;
+      }
+
+      .section-description {
+        text-align: center;
+        animation: fadeIn 1.5s ease;
+      }
+
+      .footer-section {
+        background-color: #222;
+        color: #fff;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+
+      .footer-social a {
+        color: #fff;
+        margin: 0 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0 0 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .footer-links a {
+        color: #aaa;
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        color: #fff;
+      }
+
+      .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #0066ff;
+        color: #fff;
+        padding: 10px 12px;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: background 0.3s ease;
+      }
+
+      .back-to-top:hover {
+        background: #004bb5;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body id="top">
+    <header>
+      <nav>
+        <div class="left">
+          <a href="/">Castro-bit23</a>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+          <i class="fas fa-bars"></i>
+        </label>
+
+        <div class="right">
+          <a href="index.html">Home</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#education">Education</a>
+          <a href="index.html#interests">Interests</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#blog">Blog</a>
+          <a href="index.html#testimony">Testimonials</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="projects-section">
+        <h1 class="section-title">Projects</h1>
+        <p class="section-description">
+          A showcase of some of the most impactful work I've done.
+        </p>
+
+        <div class="project-card">
+          <h3>Jahazitech Electricals LTD</h3>
+          <p>
+            An Electrical Engineering company website built with React.js and
+            TailwindCSS.
+          </p>
+          <a href="https://jahazitechelectricals.co.ke/">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>E-commerce Web App</h3>
+          <p>
+            A full-stack e-commerce app with Next.js, Node.js, and PostgreSQL.
+          </p>
+          <a href="https://e-komas.duckdns.org/">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Ratiba Scheduler</h3>
+          <p>
+            A smart timetable planner with school system integration and alerts.
+          </p>
+          <a href="#">View Project</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-section">
+      <div class="footer-content">
+        <p>&copy; 2025 Fidel Castro Odhiambo | All Rights Reserved</p>
+        <div class="footer-social">
+          <a href="https://github.com/Castro-bit23" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/fidel-castro-odhiambo-4233a5220/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="mailto:fidelcastro.odhiambo@example.com" target="_blank"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#education">Education</a></li>
+          <li><a href="index.html#interests">Interests</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#testimony">Testimonials</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <a href="#top" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+  </body>
+</html>

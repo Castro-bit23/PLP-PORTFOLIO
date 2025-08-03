@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Castro-bit23 | Testimonials</title>
+    <link rel="icon" href="images/dark.png" type="image/png" />
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+      }
+
+      header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: #222;
+        color: #fff;
+      }
+
+      .left a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+
+      .right {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .right a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .hamburger {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .right {
+          position: absolute;
+          top: 60px;
+          right: 0;
+          background: #222;
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+          display: none;
+        }
+
+        #menu-toggle:checked + .hamburger + .right {
+          display: flex;
+        }
+
+        .hamburger {
+          display: block;
+        }
+      }
+
+      .testimonials-section {
+        padding: 4rem 2rem;
+        max-width: 900px;
+        margin: auto;
+      }
+
+      .section-title,
+      .section-description {
+        text-align: center;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s ease-out forwards;
+      }
+
+      .section-description {
+        animation-delay: 0.2s;
+      }
+
+      .testimonial {
+        background: #f9f9f9;
+        border-radius: 12px;
+        color: #333;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 0.6s ease-out forwards;
+      }
+
+      .testimonial:nth-of-type(1) {
+        animation-delay: 0.3s;
+      }
+
+      .testimonial:nth-of-type(2) {
+        animation-delay: 0.5s;
+      }
+
+      .testimonial:nth-of-type(3) {
+        animation-delay: 0.7s;
+      }
+
+      .testimonial:hover {
+        transform: translateY(-5px);
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .footer-section {
+        background: #111;
+        color: #fff;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .footer-social a {
+        color: #fff;
+        margin: 0 10px;
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+      }
+
+      .footer-links li {
+        display: inline-block;
+        margin: 0 0.5rem;
+      }
+
+      .footer-links a {
+        color: #aaa;
+        text-decoration: none;
+      }
+
+      .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #222;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body id="top">
+    <header>
+      <nav>
+        <div class="left">
+          <a href="/">Castro-bit23</a>
+        </div>
+
+        <!-- CSS-only Hamburger Toggle -->
+        <input type="checkbox" id="menu-toggle" hidden />
+        <label for="menu-toggle" class="hamburger"
+          ><i class="fas fa-bars"></i
+        ></label>
+
+        <!-- Nav Links -->
+        <div class="right">
+          <a href="index.html"><span>Home</span></a>
+          <a href="index.html#skills"><span>Skills</span></a>
+          <a href="index.html#education"><span>Education</span></a>
+          <a href="index.html#interests"><span>Interests</span></a>
+          <a href="index.html#projects"><span>Projects</span></a>
+          <a href="index.html#blog"><span>Blog</span></a>
+          <a href="index.html#testimony"><span>Testimonials</span></a>
+          <a href="index.html#contact"><span>Contact</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="testimonials-section">
+        <h1 class="section-title">Testimonials</h1>
+        <p class="section-description">
+          What people are saying about working with me.
+        </p>
+        <br />
+
+        <div class="testimonial">
+          <p><strong>Jane Doe</strong></p>
+          <p>
+            "An exceptional developer! The project was delivered on time and
+            exceeded expectations. Highly recommend Castro-bit23 for any web
+            solution."
+          </p>
+        </div>
+
+        <div class="testimonial">
+          <p><strong>Michael Smith</strong></p>
+          <p>
+            "Great communication, clean code, and brilliant results. One of the
+            best collaborations I’ve had so far."
+          </p>
+        </div>
+
+        <div class="testimonial">
+          <p><strong>Linda Johnson</strong></p>
+          <p>
+            "Very professional and creative. Turned my rough idea into a fully
+            functional product with style!"
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer-section">
+      <div class="footer-content">
+        <p>&copy; 2025 Fidel Castro Odhiambo | All Rights Reserved</p>
+        <div class="footer-social">
+          <a href="https://github.com/Castro-bit23" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/fidel-castro-odhiambo-4233a5220/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=fidelcastro.odhiambo@example.com&su=Hello&body=I'm%20interested%20in%20your%20work"
+            target="_blank"
+          >
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#education">Education</a></li>
+          <li><a href="index.html#interests">Interests</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#testimony">Testimonials</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#top" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+  </body>
+</html>
